@@ -69,4 +69,9 @@
 ![image](https://github.com/user-attachments/assets/0cff6f1d-4d00-4b70-9dc1-51bf0b58d590)
 
 
+# Gradle Wrapper
+
+> The Wrapper is a script that invokes a declared version of Gradle and is the recommended way to execute a Gradle build. It is found in the project root directory as a gradlew or gradlew.bat file:
+
+![image](https://github.com/user-attachments/assets/d68fefca-104a-4327-add8-0f80bed78a85)
 
