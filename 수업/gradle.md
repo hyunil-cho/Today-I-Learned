@@ -33,4 +33,33 @@
 
 소스코드를 만드는 것부터 시작하여, 의존성 관리, 등 최종 산출물을 만드는 과정 전체를 통틀어 관리 및 자동화하는 툴!
 
+---
+
+
+# Gradle 구조
+
+![image](https://github.com/user-attachments/assets/fc20a670-e5dc-4aa2-9a01-5bcbbef35786)
+
+
+# Gradle Core concepts
+
+### Project
+
+어플리케이션, 라이브러리와 같이, 빌드가 가능한 소프트웨어
+
+#### Project 종류
+1. Single Project : root Project 하나만 포함하고 있는 프로젝트
+2. Multi Porject : 하나의 Root Project와, 하나 이상의 서브 프로젝트를 포함하고 있는 프로젝트
+
+### Build Script
+
+빌드 스크립트를 통해 그레이들로 하여금, 빌드를 하기 위해 취해야 할 단계를 명시(지시)한다.
+
+### Dependency Management
+
+프로젝트가 의존하는 외부 라이브러리를 선언하고, 자동으로 관리한다. 
+
+### Tasks
+
+가장 작은 단위의 일(Tasks are a basic unit of work)을 나타내며, 컴파일링, 혹은 테스트를 수행하는 등, 그레이들에서 다루는 가장 작은 단위의 작업이다.
 
