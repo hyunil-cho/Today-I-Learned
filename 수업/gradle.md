@@ -63,3 +63,10 @@
 
 가장 작은 단위의 일(Tasks are a basic unit of work)을 나타내며, 컴파일링, 혹은 테스트를 수행하는 등, 그레이들에서 다루는 가장 작은 단위의 작업이다.
 
+# Gradle project structure
+
+![image](https://github.com/user-attachments/assets/9f659d97-821d-4c91-9e62-72a780d738f1)
+![image](https://github.com/user-attachments/assets/0cff6f1d-4d00-4b70-9dc1-51bf0b58d590)
+
+
+
