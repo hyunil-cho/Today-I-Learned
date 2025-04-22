@@ -75,3 +75,15 @@
 
 ![image](https://github.com/user-attachments/assets/d68fefca-104a-4327-add8-0f80bed78a85)
 
+
+![image](https://github.com/user-attachments/assets/5c3cd893-b603-4455-b9bf-b9872e68b735)
+
+## Gradle Wrapper Benefits
+
+1. 프로젝트 표준화
+2. 협업을 위한 공통 환경 제공
+
+-> Gradle wrapper를 통해 빌드 태스크를 수행하도록 하여, 빌드 과정의 공통화 및 표준회를 위해 권장됨
+
+
+![image](https://github.com/user-attachments/assets/11d0c2c3-dade-4a6c-b280-4e586608cf95)
