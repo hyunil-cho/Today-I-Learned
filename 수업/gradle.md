@@ -97,3 +97,14 @@
 
 
 ![image](https://github.com/user-attachments/assets/616cf2e5-b4de-4fdc-b13d-29e5a0f3c4e9)
+
+
+# Settings File Basics - settings.gradle
+
+1. 그레이들 프로젝트의 엔트리포인트로, 세팅파일의 목적은 서브프로젝트를 빌드에 추가하기 위함이다.
+2. 그레이들은 싱글 프로젝트, 멀티 프로젝트 모두를 지원하며, 싱글 프로젝트의 경우, settings.gradle은 선택사항이지만, 멀티프로젝트라면 필수!
+3. groovy, 혹은 ㅗ틀린으로 작성이 가능한 스크립트 파일로, 코틀린으로 작성된다면 확장자 명이 kts로 끝난다.(ettings.gradle.kts)
+4. settings.gradle 파일은, root project 상에서 보통 사용된다.
+
+![image](https://github.com/user-attachments/assets/77e979c2-1144-4b59-be84-268af83446ae)
+
