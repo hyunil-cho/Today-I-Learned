@@ -87,3 +87,13 @@
 
 
 ![image](https://github.com/user-attachments/assets/11d0c2c3-dade-4a6c-b280-4e586608cf95)
+
+![image](https://github.com/user-attachments/assets/585e716e-4581-4501-bf19-dc4791d14376)
+
+
+# Command-Line Interface Basics
+
+그레이들은 CLI를 통해 IDE 밖에서도 사용이 가능함
+
+
+![image](https://github.com/user-attachments/assets/616cf2e5-b4de-4fdc-b13d-29e5a0f3c4e9)
