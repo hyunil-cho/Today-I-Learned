@@ -122,3 +122,18 @@
 > Plugins extend Gradle’s functionality and can contribute tasks to a project.
 > > Adding a plugin to a build is called applying a plugin and makes additional functionality available.
 https://docs.gradle.org/current/userguide/build_file_basics.html
+
+# Dependency Management Basics
+
+- 그레이들은 의존성 관리 지원 기능이 내장되어 있음
+- 의존되는 대상의 종류는, 라이브러리, 플러그인, Jars, 소스코드 등이 될 수 있음
+
+  ![image](https://github.com/user-attachments/assets/579861d4-88bb-413f-b58e-3645b67a8077)
+
+### (참고) Version Catalog
+
+ 멀티 프로젝트(프로젝트가 두 개 이상인 경우)의 경우, 여러 서브프로젝트 별로 동일한 라이브러리를 사용하는 경우, 버전 관리가 힘들 수 있는데,
+ 이러한 문제를 풀기 위해 그레이들은 libs.versions.toml을 제공하며, 여기에 버전을 명시하고, 각 서브프로젝트가 해당 파일을 참조하도록 하여, 관리를 중앙화할 수 있음
+
+ ![image](https://github.com/user-attachments/assets/13eb7262-9db6-4e34-bdeb-ac77407e4688)
+
