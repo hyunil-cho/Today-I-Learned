@@ -108,3 +108,17 @@
 
 ![image](https://github.com/user-attachments/assets/77e979c2-1144-4b59-be84-268af83446ae)
 
+# Build File Basics
+
+모든 그레이들 프로젝트는, 최소 하나의 빌드 스크립트로 구성되어 있으며, 코틀린(확장자 kts) 혹은 groovy로 작성가능하고, 아래와 같은 내용을 담고 있음
+
+1. 빌드 스크립트가 의존하는 플러그인, 라이브러리, 태스크
+2. 소스코드가 의존하는 라이브러리
+
+![image](https://github.com/user-attachments/assets/124acacc-0a94-41b5-9b75-86411b8d63a7)
+
+## What is Plugins?
+
+> Plugins extend Gradle’s functionality and can contribute tasks to a project.
+> > Adding a plugin to a build is called applying a plugin and makes additional functionality available.
+https://docs.gradle.org/current/userguide/build_file_basics.html
