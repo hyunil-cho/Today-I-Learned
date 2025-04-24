@@ -137,3 +137,37 @@ https://docs.gradle.org/current/userguide/build_file_basics.html
 
  ![image](https://github.com/user-attachments/assets/13eb7262-9db6-4e34-bdeb-ac77407e4688)
 
+# Task Basics
+
+Task란, 그레이들에서 최소 작업 단위로, task 각각은 독립된 단위로 실행 및 관리되며, 다음과 같은 작업을 task라고 부른다
+
+- compile class
+- generate JAR(Executable Job)
+- publishing archive to a repository
+- execute tests
+
+## execute a task
+
+gradle wrapper 혹은 gradle 명령어를 통해 태스크를 실행할 수 있으며, 다음과 같이, 실행하고자 하는 task 명을 뒤에 붙인다.
+이때, 복수개의 태스크를 동시에 실행하거나, 태스크에 인자를 넣어, 프로그래밍할 수 있다.
+</br>
+</br>
+`
+$ ./gradlew build
+`
+
+이때, 태스크는 직접 정의할 수 있으며, 혹은 빌드 스크립트 내의 플러그인(java)을 통해 자동으로 등록되기도 한다.
+
+사용가능한 태스크 목록을 조회하기 위해서는 아래와 같이 tasks 태스크를 실행하면, 실행가능한 태스크 목록을 확인할 수 있다.
+
+</br>
+</br>
+`
+$ ./gradlew tasks
+`
+## task dependency
+
+여러 태스크 사이에서 의존성을 맺어줄 수 있다. 예를 들어, A,B라는 태스크가 있을 때, B는 반드시 A보다 다음에 실행되어야 하는 경우가 있을 수 있다. 이런 경우, A,B 사이의 의존성을 맺어주어, 그레이들로 하여금, 실행 순서를 제어할 수 있다.
+
+![image](https://github.com/user-attachments/assets/279eefbd-8576-4e89-8452-cb1f7aa480d7)
+
