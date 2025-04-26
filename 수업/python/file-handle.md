@@ -38,7 +38,7 @@ https://www.geeksforgeeks.org/how-to-install-pip-in-macos/
 
 #### 설치
 `
-pip install pandas
+pip install pandas openpyxl
 `
 
 ### pandas란?
@@ -48,7 +48,34 @@ pip install pandas
 
 pandas를 활용하면, 행렬 형태의 데이터를 간단하고, 효율적으로 처리할 수 있으며, 다양한 형태의 연산, 예를 들어 집계 등을 간단하게 처리할 수 있다.
 
+## 코드
 
+```
+import pandas as pd
+
+data = [
+    ["Alice", 25, "New York"],
+    ["Bob", 30, "Los Angeles"],
+    ["Charlie", 28, "Chicago"]
+]
+
+# 데이터프레임 생성
+df = pd.DataFrame(data, columns=["이름", "나이", "도시"])
+
+# 엑셀 파일로 저장 (index=False는 인덱스 컬럼을 저장하지 않겠다는 뜻이야)
+# df.to_excel("/home/output.xlsx", index=False)
+
+avg_age = df['나이'].mean()
+
+df_avg = pd.DataFrame({'평균 나이': [avg_age]})
+
+with pd.ExcelWriter("/home/output.xlsx", engine='openpyxl') as writer:
+    # 첫 번째 시트에 데이터 저장
+    df = pd.DataFrame(data, columns=["이름", "나이", "도시"]).to_excel(writer, sheet_name='Sheet1', index=False)
+
+    # 두 번째 시트에 다른 데이터 저장
+    df_avg.to_excel(writer, sheet_name='Sheet2', index=False)
+```
 
 
 
