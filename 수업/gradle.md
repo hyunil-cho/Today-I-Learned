@@ -171,3 +171,33 @@ $ ./gradlew tasks
 
 ![image](https://github.com/user-attachments/assets/279eefbd-8576-4e89-8452-cb1f7aa480d7)
 
+# Plugin Basics
+
+> A plugin is a reusable piece of software that provides additional functionality to the Gradle build system. It can:
+
+- Add new tasks to your build (like compileJava or test)
+
+- Add new configurations (like implementation or runtimeOnly)
+
+- Contribute DSL elements (like application {} or publishing {})
+
+- plugins 블록에 플러그인을 삽입할 수 있으며, 그레이들은, 명시된 플러그인을 다운로드 받거나, 이미 저장된 플러그인을 로컬에서 꺼내와 사용할 수 있다.
+
+![image](https://github.com/user-attachments/assets/ec1823bd-dd2c-4ff9-9c06-b65c82cf8fdc)
+
+-  java-library 플러그인을 사용할 수 있다. 이를 통해, 자바를 컴파일하거나, 테스트를 수행하는 등의 일을 할 수 있다.
+-  spotless 플러그인을 사용할 수 있다. 이는, 코드 포맷팅이나 프리티어 같은 외부 툴과 연동할 수 있게 한다.
+
+## 플러그인 타입 및 출처
+
+### 타입
+1. Script plugins – Reusable .gradle or .gradle.kts files that are applied using apply from:.
+2. Pre-compiled plugins – Packaged Kotlin or Groovy code applied with the plugins {} block.
+3. Binary plugins – Packaged and published plugins (often from the Plugin Portal or Maven) that are applied with the plugins {} block.
+
+### 출처
+
+1. gradle에 기본 내장된 플러그인
+2. maven 등, 외부에서 다운(빌드 시, 그레이들이 자동으로 다운 cf@  Gradle Plugin Portal )
+3. 직접 개발 
+   
