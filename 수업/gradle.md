@@ -201,3 +201,22 @@ $ ./gradlew tasks
 2. maven 등, 외부에서 다운(빌드 시, 그레이들이 자동으로 다운 cf@  Gradle Plugin Portal )
 3. 직접 개발 
    
+# Incremental Builds and Build Caching Basic
+
+ 그레이들은 빌드에 필요한 시간을 축소하기 위하여, incremental builds and build caching 매커니즘을 이용한다.
+
+## Incremental Build
+
+> An incremental build is a build that avoids running tasks whose inputs have not changed since the previous build
+
+ 즉, 이전 태스크의 인풋값과 현재 태스크의 인풋값이 같다면, 이전 태스크 실행 결과를 캐싱하고, 이를 재사용할 수 있다. 이를 통해, 불필요한 
+태스크를 제외함으로써, 전체적인 실행 시간을 줄일 수 있다. 이를 위해, 그레이들은 빌드타임에 인풋을 검사하고, 변하지 않았다면, Incremental build를 수행한다.
+
+## Build Caching
+
+> Incremental Builds are a great optimization that helps avoid work already done. If a developer continuously changes a single file, there is likely no need to rebuild all the other files in the project.
+
+
+
+![image](https://github.com/user-attachments/assets/5eefce4e-f29b-4a26-9e14-19a5d290eb43)
+
