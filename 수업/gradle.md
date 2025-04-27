@@ -220,3 +220,17 @@ $ ./gradlew tasks
 
 ![image](https://github.com/user-attachments/assets/5eefce4e-f29b-4a26-9e14-19a5d290eb43)
 
+# 과제
+
+### 목적 
+멀티 프로젝트 개발
+
+### 요구사항
+
+utils 프로젝트와, A 프로젝트를 추가하는데, A프로젝트 Utils 프로젝트에 의존한다.
+
+Utils.Commons 클래스가 존재하며, 이 안에, public static LocalDateTime getNow(String strDate);
+
+A.Service.printNow(String now): -> Utils.Commons.getNow에 의존하는 메서드 작성
+
+utils 프로젝트와 A 프로젝트는 각각 서브프로젝트로써 존재해야 함.
