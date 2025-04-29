@@ -11,6 +11,13 @@
 
 # SQL Injection
 
+## What is SQL Injection?
+
+> In computing, SQL injection is a code injection technique used to attack data-driven applications, in which malicious SQL statements are inserted into an entry field for execution.
+
+![image](https://github.com/user-attachments/assets/a2e59e7e-3550-4362-a766-ba4e13e1d2a2)
+
+
 ```
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -53,6 +60,11 @@ public class SqlInjectionExample {
 }
 
 ```
+
+## How to prevent it?
+
+![image](https://github.com/user-attachments/assets/2143ddec-f6ac-43e5-ba3d-e9dcd0b40820)
+
 
 # XSS
 
