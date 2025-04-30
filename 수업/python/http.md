@@ -66,3 +66,7 @@ https://developers.google.com/workspace/gmail/api/reference/rest?hl=ko
 ![image](https://github.com/user-attachments/assets/d0487612-4429-4658-9d56-5328529ba6bf)
 
 
+# 실습
+유저정보를 호출하고, 이 중, 이름이 L로 시작하는 사람만 필터링하여 출력하기
+https://jsonplaceholder.typicode.com/
+
