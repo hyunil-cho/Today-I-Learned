@@ -1,15 +1,14 @@
 # 수업 목표
-
-웹 통신 기본 프로토콜(약속)인 HTTP에 대하여 학습하고, 이해함으로써, 외부 서비스와 연동 프로그램 작성을 위한 코드를 작성하고 이해할 수 있도록 하기 위함.
+<br>
+웹 통신 기본 프로토콜(약속)인 HTTP에 대하여 학습하고, 이해함으로써, 외부 서비스와 연동 프로그램 작성을 위한 코드를 작성하고 이해할 수 있도록 하기 위함.<br>     
 
 # HTTP 프로토콜
-
-> HTTP(Hypertext Transfer Protocol)는 웹에서 데이터를 주고받는 서버-클라이언트 모델의 Protocol
+> HTTP(Hypertext Transfer Protocol)는 웹에서 데이터를 주고받는 서버-클라이언트 모델의 Protocol  
 
 ## Web이란?
 
-![image](https://github.com/user-attachments/assets/26bac47c-4abe-4ff2-87ff-ed422989b6f9)
-
+![image](https://github.com/user-attachments/assets/26bac47c-4abe-4ff2-87ff-ed422989b6f9)  
+<br>
 ## 웹과 관련된 용어
 ---
 
@@ -37,4 +36,33 @@
    ![image](https://github.com/user-attachments/assets/9229ffe1-391c-40fd-84f8-38255e2a4586)
 
 
-## 
+## How HTTP Protocol work?
+
+![image](https://github.com/user-attachments/assets/3d86bb0c-46f1-47b6-ba2f-87a8e28ade14)
+
+## HTTP Request
+</br>
+사용자가 서버에게 보내는 메시지를 HTTP Request라고 하며, 다음과 같은 구조를 가지고 있다.
+
+![image](https://github.com/user-attachments/assets/7c885773-3494-41da-ace8-1c1b2e061500)
+## HTTP Response
+서버가 사용자의 요청에 대하여 응답 메시지로, 아래와 같은 구조를 가지고 있다.
+![image](https://github.com/user-attachments/assets/cfeaffc2-b5ed-4feb-8c69-b85b4430a0ec)
+
+
+## OPEN API?
+
+- Open API란, 누구나 사용할 수 있도록 **공개된 API (Application Programming Interface)**를 말합니다. 쉽게 말해, 다른 프로그램이나 서비스가 내 프로그램 기능을 이용할 수 있게 만든 창구를 공개한 것
+- 여러 서비스(Gmail, Naver Samrt store, 등등)에서는 본 서비스와 연동하여 프로그램을 개발할 수 있도록 웹 서비스와 이를 사용하기 위한 메뉴얼을 제공
+
+https://developers.google.com/workspace/gmail/api/reference/rest?hl=ko
+
+### JSON
+
+1. 보통 많은 웹서비스는, HTTP API 통신 시, Body에 JSON 포맷을 이용해 데이터를 구조화하고, 통신하는데 사용함
+2. JSON 포맷이란, 아래와 같이 데이터를 구조화한 것을 의미
+3. Python에서는 딕셔너리 자료구조를 이용하여 간편하게 json 포맷을 만들 수 있음
+   
+![image](https://github.com/user-attachments/assets/d0487612-4429-4658-9d56-5328529ba6bf)
+
+
