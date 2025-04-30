@@ -1,3 +1,7 @@
+# 수업 목표
+
+웹 통신 기본 프로토콜(약속)인 HTTP에 대하여 학습하고, 이해함으로써, 외부 서비스와 연동 프로그램 작성을 위한 코드를 작성하고 이해할 수 있도록 하기 위함.
+
 # HTTP 프로토콜
 
 > HTTP(Hypertext Transfer Protocol)는 웹에서 데이터를 주고받는 서버-클라이언트 모델의 Protocol
@@ -16,11 +20,13 @@
 ![image](https://github.com/user-attachments/assets/e8700e14-312e-4f1e-a110-26fb9e502d7a)
 ---
 
-##URL
+## URL
 
 - 클라이언트는, URL을 통해, 어떤 서버에 접속하여, 어떤 리소스를 요청하고 싶은지 명시한다
 - 서버는 URL을 통해 사용자의 요청을 확인하고, 미리 정의된 리소스를 반환한다.
-- 
+  
+![image](https://github.com/user-attachments/assets/0d22790b-68bf-45c0-bda0-8089d7b1bd5d)
+
 
 ## Protocol?
 
