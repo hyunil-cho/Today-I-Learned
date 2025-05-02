@@ -70,3 +70,6 @@ https://developers.google.com/workspace/gmail/api/reference/rest?hl=ko
 유저정보를 호출하고, 이 중, 이름이 L로 시작하는 사람만 필터링하여 출력하기
 https://jsonplaceholder.typicode.com/
 
+# 과제
+
+https://jsonplaceholder.typicode.com/에서 원하는 api를 통해 어플리이케이션 기획 및 설계, 개발해보기
