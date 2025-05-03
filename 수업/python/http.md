@@ -73,3 +73,7 @@ https://jsonplaceholder.typicode.com/
 # 과제
 
 https://jsonplaceholder.typicode.com/에서 원하는 api를 통해 어플리이케이션 기획 및 설계, 개발해보기
+
+# 과제 상세
+
+https://jsonplaceholder.typicode.com에서 post id가 홀수인 post를 불러와, 이를 엑셀로 저장하는 프로그램 개발
