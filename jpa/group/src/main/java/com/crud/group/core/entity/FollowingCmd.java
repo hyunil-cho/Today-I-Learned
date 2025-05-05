@@ -1,4 +1,4 @@
-package com.crud.group.entity;
+package com.crud.group.core.entity;
 
 public enum FollowingCmd {
     FOLLOWING,

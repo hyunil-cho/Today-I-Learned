@@ -1,6 +1,6 @@
-package com.crud.group.entity;
+package com.crud.group.core.entity;
 
-import com.crud.group.entity.base.CreateTimeEntity;
+import com.crud.group.core.entity.base.CreateTimeEntity;
 import jakarta.persistence.*;
 
 @Entity

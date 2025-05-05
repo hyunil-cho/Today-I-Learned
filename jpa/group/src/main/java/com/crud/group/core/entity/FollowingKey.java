@@ -1,4 +1,4 @@
-package com.crud.group.entity;
+package com.crud.group.core.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
