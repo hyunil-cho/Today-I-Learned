@@ -1,8 +1,9 @@
 package com.crud.group.web.controller.post.view;
 
 import com.crud.group.core.usecase.post.view.ViewPostRequest;
+import com.crud.group.web.controller.common.HttpReq;
 
-public class RequestForViewPosts {
+public class RequestForViewPosts extends HttpReq {
     private final int startPage;
     private final int size;
 

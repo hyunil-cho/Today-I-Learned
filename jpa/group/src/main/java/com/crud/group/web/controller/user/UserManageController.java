@@ -3,7 +3,6 @@ package com.crud.group.web.controller.user;
 import com.crud.group.core.usecase.user.SaveNewUserUseCase;
 import com.crud.group.core.usecase.user.SaveUserRequest;
 import com.crud.group.core.usecase.user.SaveUserResponse;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,18 +19,12 @@ public class UserManageController {
     }
 
     @PostMapping
-    public ResponseEntity<ResponseForNewUser> saveNewUser(@RequestBody RequestForNewUser req){
+    public ResponseForNewUser saveNewUser(@RequestBody RequestForNewUser req){
 
         SaveUserRequest saveUserRequest = req.to();
         SaveUserResponse result = this.usecase.handle(saveUserRequest);
 
-        if(result.isSuccessFull()){
-            return ResponseEntity.ok(new ResponseForNewUser(result.getMeesage(), result.getUserId()));
-        }else if(result.isClientError()){
-            return ResponseEntity.badRequest().body(new ResponseForNewUser(result.getMeesage(), result.getUserId()));
-        }
-
-        return  ResponseEntity.internalServerError().body(new ResponseForNewUser(result.getMeesage(),result.getUserId()));
+        return new ResponseForNewUser(result.getResponse(), result.getUserId());
 
     }
 

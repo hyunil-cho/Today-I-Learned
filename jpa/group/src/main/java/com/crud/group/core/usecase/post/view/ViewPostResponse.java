@@ -2,11 +2,12 @@ package com.crud.group.core.usecase.post.view;
 
 import com.crud.group.core.entity.PostInfo;
 import com.crud.group.core.usecase.Response;
+import com.crud.group.core.usecase.Resultable;
 
 import java.util.Collections;
 import java.util.List;
 
-public class ViewPostResponse extends Response {
+public class ViewPostResponse extends Resultable {
 
     private final int totalPage;
     private final int size;

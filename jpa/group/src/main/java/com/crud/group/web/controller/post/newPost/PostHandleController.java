@@ -18,18 +18,12 @@ public class PostHandleController {
 
 
     @PostMapping
-    public ResponseEntity<ResponseForSavingPost> savePost(@RequestBody RequestForSavingPost request){
+    public ResponseForSavingPost savePost(@RequestBody RequestForSavingPost request){
 
         PostRequest postRequest = request.to();
-        PostResponse result = this.postUsecase.handle(postRequest);
+        PostResponse response = this.postUsecase.handle(postRequest);
 
-        if(result.isSuccessFull()){
-            return ResponseEntity.ok(new ResponseForSavingPost(result.getMeesage()));
-        }else if(result.isClientError()){
-            return ResponseEntity.badRequest().body(new ResponseForSavingPost(result.getMeesage()));
-        }
-
-        return  ResponseEntity.internalServerError().body(new ResponseForSavingPost(result.getMeesage()));
+        return new ResponseForSavingPost(response.getResponse(), "success");
 
     }
 

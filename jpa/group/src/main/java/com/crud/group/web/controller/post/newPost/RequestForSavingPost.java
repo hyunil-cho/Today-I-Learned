@@ -1,8 +1,9 @@
 package com.crud.group.web.controller.post.newPost;
 
 import com.crud.group.core.usecase.post.newpost.PostRequest;
+import com.crud.group.web.controller.common.HttpReq;
 
-public class RequestForSavingPost {
+public class RequestForSavingPost extends HttpReq {
     private final String title;
     private final String body;
     private final long authorId;

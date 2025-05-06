@@ -23,18 +23,10 @@ public class ViewPostController {
     }
 
     @GetMapping
-    public ResponseEntity<ResponseForViewPost> listPostWithPageable(@RequestBody RequestForViewPosts viewPosts){
+    public ResponseForViewPost listPostWithPageable(@RequestBody RequestForViewPosts viewPosts){
 
         ViewPostResponse result = this.useCase.handle(viewPosts.to());
-        if(result.isSuccessFull()){
-            return ResponseEntity.ok(new ResponseForViewPost(result));
-        }else if(result.isClientError()){
-            return ResponseEntity.badRequest().body(new ResponseForViewPost(result));
-        }
-
-        return  ResponseEntity.internalServerError().body(new ResponseForViewPost(result));
-
-
+        return new ResponseForViewPost(result);
 
     }
 

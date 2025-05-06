@@ -1,8 +1,9 @@
 package com.crud.group.web.controller.user;
 
 import com.crud.group.core.usecase.user.SaveUserRequest;
+import com.crud.group.web.controller.common.HttpReq;
 
-public class RequestForNewUser {
+public class RequestForNewUser extends HttpReq {
 
     private final String userName;
     private final String userPassword;
