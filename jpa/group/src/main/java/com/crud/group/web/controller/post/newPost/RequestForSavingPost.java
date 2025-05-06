@@ -1,6 +1,6 @@
-package com.crud.group.web.controller.post;
+package com.crud.group.web.controller.post.newPost;
 
-import com.crud.group.core.usecase.post.PostRequest;
+import com.crud.group.core.usecase.post.newpost.PostRequest;
 
 public class RequestForSavingPost {
     private final String title;

@@ -1,11 +1,8 @@
 package com.crud.group.web.controller.user;
 
-import com.crud.group.core.usecase.Response;
-import com.crud.group.core.usecase.UseCase;
 import com.crud.group.core.usecase.user.SaveNewUserUseCase;
 import com.crud.group.core.usecase.user.SaveUserRequest;
 import com.crud.group.core.usecase.user.SaveUserResponse;
-import com.crud.group.web.controller.post.ResponseForSavingPost;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

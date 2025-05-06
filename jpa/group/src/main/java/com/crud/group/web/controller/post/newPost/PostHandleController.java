@@ -1,8 +1,8 @@
-package com.crud.group.web.controller.post;
+package com.crud.group.web.controller.post.newPost;
 
 import com.crud.group.core.usecase.UseCase;
-import com.crud.group.core.usecase.post.PostRequest;
-import com.crud.group.core.usecase.post.PostResponse;
+import com.crud.group.core.usecase.post.newpost.PostRequest;
+import com.crud.group.core.usecase.post.newpost.PostResponse;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

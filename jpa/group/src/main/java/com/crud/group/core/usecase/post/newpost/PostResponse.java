@@ -1,4 +1,4 @@
-package com.crud.group.core.usecase.post;
+package com.crud.group.core.usecase.post.newpost;
 
 import com.crud.group.core.usecase.Response;
 

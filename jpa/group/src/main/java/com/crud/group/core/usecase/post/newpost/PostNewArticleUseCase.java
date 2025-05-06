@@ -1,9 +1,8 @@
-package com.crud.group.core.usecase.post;
+package com.crud.group.core.usecase.post.newpost;
 
 import com.crud.group.core.entity.*;
 import com.crud.group.core.usecase.UseCase;
 import jakarta.transaction.Transactional;
-import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.crud.group.web.controller.post;
+package com.crud.group.web.controller.post.newPost;
 
 
 public class ResponseForSavingPost {
