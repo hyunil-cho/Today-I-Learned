@@ -40,3 +40,30 @@ response = requests.post(URL, data=payload)
 API 호출에 대한 HTTP Response 데이터가 담겨있으며, 필요에 따라 적절한 값을 꺼내어 사용할 수 있다.
 
 일례로, response body는 물론, header, 응답코드 등을  확인할 수 있으며, 이를 통해, 적절한 조치를 취할 수 있다.
+
+
+# 실습 - 동행복권 API를 통한 복권 정보 획득 1-10회까지 결과 중, 가장 많이 나온 숫자 5개 추출해보기 
+
+get https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo={drwNo}
+
+API 정보 
+```
+{
+  totSellamnt: 81032551000,
+  returnValue: "success",
+  drwNoDate: "2019-06-01",
+  firstWinamnt: 4872108844,
+  drwtNo6: 25,
+  drwtNo4: 21,
+  firstPrzwnerCo: 4,
+  drwtNo5: 22,
+  bnusNo: 24,
+  firstAccumamnt: 19488435376,
+  drwNo: 861,
+  drwtNo2: 17,
+  drwtNo3: 19,
+  drwtNo1: 11
+}
+```
+
+# 실습 - API 명세에 맞게, API 호출
