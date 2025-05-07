@@ -13,6 +13,7 @@
 #### #Cookie & Session (참고)
 
 > HTTP 프로토콜은 기본적으로 상태를 가지고 있지 않는다. 하지만, 웹 어플리케이션이 점차 발전하면서, 개인화된 서비스의 수요가 증가하였고, 이를 처리하기 위하여 서버가 클라이언트 별로 상태를 기억해야 할 필요가 증가하게 되었다. 이를 처리하기 위해, 서버는 클라이언트에게 cookie를 주고, 클라이언트는 받은 cookie를 서버에게 요청할 때마다 보냄으로써, 무상태 프로토콜에 상태라는 개념을 가능케 한다.
+![image](https://github.com/user-attachments/assets/b2a30b92-6285-43fd-a559-8449346c1cf1)
 
 ### GET, POST, PUT, DELETE, HEAD, OPTIONS 요청 지원
 
@@ -33,10 +34,9 @@ payload = {'username': 'test', 'password': 'secret'}
 response = requests.post(URL, data=payload)
 ```
 
+
+
 또한, get(), post() 등 메서드 호출 시, Response 타입의 객체를 반환하는데, 이 객체 내부에는
 API 호출에 대한 HTTP Response 데이터가 담겨있으며, 필요에 따라 적절한 값을 꺼내어 사용할 수 있다.
 
 일례로, response body는 물론, header, 응답코드 등을  확인할 수 있으며, 이를 통해, 적절한 조치를 취할 수 있다.
-
-### URL 파라미터 자동 인코딩
-
