@@ -14,6 +14,9 @@
 
 #### GET & POST
 
+requests를 통해, get,post,delete,head 등, 표준 HTTP 메서드를 간편하게 사용할 수 있으며, 필요에 따라서는
+request body에 데이터를 추가할 수 있다. 
+
 ```
 import requests
 response = requests.get("https://api.github.com/users/octocat")
@@ -26,4 +29,8 @@ payload = {'username': 'test', 'password': 'secret'}
 response = requests.post(URL, data=payload)
 ```
 
+또한, get(), post() 등 메서드 호출 시, Response 타입의 객체를 반환하는데, 이 객체 내부에는
+API 호출에 대한 HTTP Response 데이터가 담겨있으며, 필요에 따라 적절한 값을 꺼내어 사용할 수 있다.
+
+일례로, response body는 물론, header, 응답코드 등을  확인할 수 있으며, 이를 통해, 적절한 조치를 취할 수 있다.
 
