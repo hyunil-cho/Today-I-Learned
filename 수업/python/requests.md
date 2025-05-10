@@ -69,3 +69,20 @@ API 정보
 # 과제 
 
 Gmail API와 연동 후, Excel에서 고객정보를 불러와 이메일 보내기 자동화 프로그램 개발
+
+## 개발 프로세스 
+
+1. Excel에서 사용자 데이터 loading
+2. 1에서 불러온 데이터를 처리할 수 있도록 pandas 객체로 변환
+3. Gmail API를 이용하여 이메일 전송
+
+### OAuth
+
+> Open Authorization의 약자로, 외부 애플리케이션이 사용자의 비밀번호를 직접 알지 않고도 특정 서비스(예: Gmail, Facebook 등)에 제한된 접근 권한을 부여받을 수 있도록 해주는 인증 프로토콜
+![image](https://github.com/user-attachments/assets/c5c4b473-354c-4f06-aff7-a45100092546)
+
+### OAuth를 통해 얻을 수 있는 효과
+- 비밀번호 노출 없이 안전한 권한 부여
+- 특정 기능만 제한적으로 허용 (전체 계정 접근 X)
+- 언제든지 접근 권한을 취소할 수 있음
+
