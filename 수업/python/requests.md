@@ -13,6 +13,7 @@
 #### #Cookie & Session (참고)
 
 > HTTP 프로토콜은 기본적으로 상태를 가지고 있지 않는다. 하지만, 웹 어플리케이션이 점차 발전하면서, 개인화된 서비스의 수요가 증가하였고, 이를 처리하기 위하여 서버가 클라이언트 별로 상태를 기억해야 할 필요가 증가하게 되었다. 이를 처리하기 위해, 서버는 클라이언트에게 cookie를 주고, 클라이언트는 받은 cookie를 서버에게 요청할 때마다 보냄으로써, 무상태 프로토콜에 상태라는 개념을 가능케 한다.
+
 ![image](https://github.com/user-attachments/assets/b2a30b92-6285-43fd-a559-8449346c1cf1)
 
 ### GET, POST, PUT, DELETE, HEAD, OPTIONS 요청 지원
@@ -79,10 +80,15 @@ Gmail API와 연동 후, Excel에서 고객정보를 불러와 이메일 보내�
 ### OAuth
 
 > Open Authorization의 약자로, 외부 애플리케이션이 사용자의 비밀번호를 직접 알지 않고도 특정 서비스(예: Gmail, Facebook 등)에 제한된 접근 권한을 부여받을 수 있도록 해주는 인증 프로토콜
+> > 로그인에 성공할 경우, refresh token과, access token을 발급받게 된다. 이때, access token을 이용해 api를 사용하며, 시간이 만기(expired) 된 경우, refresh token을 이용하여 access token을 재발급받는다. 이때, refresh token은 access token 보다 유효기간이 길며, 이 마저도 만료되면 다시 로그인을 수행해야 한다.
+
 ![image](https://github.com/user-attachments/assets/c5c4b473-354c-4f06-aff7-a45100092546)
 
 ### OAuth를 통해 얻을 수 있는 효과
 - 비밀번호 노출 없이 안전한 권한 부여
 - 특정 기능만 제한적으로 허용 (전체 계정 접근 X)
 - 언제든지 접근 권한을 취소할 수 있음
+
+Cf) https://ohou.se/ 로그인
+
 
