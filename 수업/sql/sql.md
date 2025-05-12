@@ -35,7 +35,7 @@ RDBMS는 데이터를 테이블이라는 논리적 단위로 나누어 저장한
 
 # 테이블 기본 구성 요소
 
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/952a6eef-f1f5-430f-aaa7-3ed82fc63fd6)
 
 
 1. 기본키(Primary Key) : 테이블 내의 튜플(행)을 유일하게 구분할 수 있는 칼럼. 이 칼럼은 중복되어서는 안된다. 그외 칼럼은 중복을 허용할 수 있으나, 제약조건을 걸어 중복을 방지할 수도 있다.
