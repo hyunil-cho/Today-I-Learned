@@ -97,3 +97,21 @@ pd.DataFrame(data)
 - values: numpy array형식의 데이터 값
 - dtypes: column 별 데이터 타입
 - T: DataFrame을 전치(Transpose)
+
+## How To Handle Column
+
+>DataFrame에 key 값으로 column의 이름을 지정하여 column을 선택할 수 있습니다.1개의 column을 가져올 수 있으며, 1개의 column 선택시 Series가 됩니다
+
+```
+data = {
+    'name': ['Kim', 'Lee', 'Park'], 
+    'age': [24, 27, 34], 
+    'children': [2, 1, 3]
+}
+
+df = pd.DataFrame(data)
+df['name']
+df[['name','age']]
+```
+
+또한, rename으로 칼럼의 이름을 변경 가능. 이때, inplace 값을 통해, 변경하고자 하는 DataFrame에 바로 적용하거나, 새로운 DataFrame을 생성할 수 있음.
