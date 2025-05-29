@@ -20,9 +20,28 @@ import pandas as pd # 관례상, pd로 많이 사용함
 3. 데이터 타입을 가집니다. (dtype)
 
 **주의! 가능하면 동일한 데이터 타입을 사용하는 것이 좋음**
+**소수점을 처리해야 하는 경우, 혹은 반대의 경우, Series 선언 시, 사용하고자 하는 타입 명시 가능**
 
 ```
-se = pd.Series([1,2,3])
-se
+import pandas as pd
 
+se = pd.Series([1,2,3])
+print(se[0])
+print(se[1])
+
+s = pd.Series([1,2,3], dtype='float64')
+```
+
+## Series 내의 여러 내장 기능
+
+1. fancy indexing
+```
+se = pd.Series([1,2,3])
+s[[0,1]]
+```
+2. boolean indexing
+```
+np.random.seed(0)
+s = pd.Series(np.random.randint(10000, 20000, size=(10,)))
+s[s > 10000] # 이외, 여러 boolean 표현식 사용 가능
 ```
