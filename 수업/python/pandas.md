@@ -56,3 +56,44 @@ print(s.index)
 4. 그외
 isnull(), isna() 결측치(Nan) 값을 찾는 함수
 notnull() 등
+
+## DataFrame
+
+1. 2차원 데이터 구조 (Excel 데이터 시트를 생각하시면 됩니다)
+2. 행(row), 열(column)으로 구성되어 있습니다.
+3. 각 열(column)은 각각의 데이터 타입 (dtype)을 가집니다.
+
+### How to create?
+
+```
+df = pd.DataFrame([[1, 2, 3], 
+              [4, 5, 6], 
+              [7, 8, 9]])
+
+print(df)
+
+pd.DataFrame([[1, 2, 3], 
+              [4, 5, 6], 
+              [7, 8, 9]], columns=['가', '나', '다'])
+
+print(df)
+
+# 딕셔너리로 생성 가능, 이 경우, 칼럼은 키 값으로 자동 매핑
+
+data = {
+    'name': ['Kim', 'Lee', 'Park'], 
+    'age': [24, 27, 34], 
+    'children': [2, 1, 3]
+}
+
+pd.DataFrame(data)
+
+```
+
+### 속성
+
+- index: index (기본 값으로 RangeIndex)
+- columns: column 명
+- values: numpy array형식의 데이터 값
+- dtypes: column 별 데이터 타입
+- T: DataFrame을 전치(Transpose)
