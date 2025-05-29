@@ -38,6 +38,7 @@ s = pd.Series([1,2,3], dtype='float64')
 ```
 se = pd.Series([1,2,3])
 s[[0,1]]
+# Series의 경우, 파이썬의 배열과 마찬가지로 슬라이싱도 가능
 ```
 2. boolean indexing
 ```
@@ -45,3 +46,12 @@ np.random.seed(0)
 s = pd.Series(np.random.randint(10000, 20000, size=(10,)))
 s[s > 10000] # 이외, 여러 boolean 표현식 사용 가능
 ```
+3. Index 지정
+```
+s = pd.Series(['마케팅', '경영', '개발', '기획', '인사'], index=['a', 'b', 'c', 'd', 'e'])
+print(s)
+print(s.index)
+```
+4. 그외
+isnull(), isna() 결측치(Nan) 값을 찾는 함수
+notnull() 등
