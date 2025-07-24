@@ -17,7 +17,9 @@ EX) java -cp myapp.jar:lib/* com.example.Main
 이 경우, 클래스패스를 별도로 잡아주던가, 공유 라이브러리 폴더를 함께 쓰는 방식을 생각해 볼 수 있다. 하지만, 더 큰 문제는 서로 다른 어플리케이션이 
 동일하지만, 버전이 다른 라이브러리에 동시에 의존하는 경우 문제가 된다. 이때는 JVM이 클래스를 로딩하는 순서에 따라서 NoSuchMethod나 ClassNotFoundException 등이 발생할 수 있다.
 
+
 > In general, if multiple classes with the same fully qualified name are available to the JVM, the conflict resolution strategy is simple and straightforward: the first appropriate class wins. 
+
 
 [관련 오라클 문서]([https://docs.oracle.com/javase/8/docs/](https://blogs.oracle.com/javamagazine/post/how-the-jvm-locates-loads-and-runs-libraries)
 
