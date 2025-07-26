@@ -48,3 +48,23 @@ EX) java -cp myapp.jar:lib/* com.example.Main
 
 ## 컨테이너 이미지
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+참고 
+1. https://creboring.net/blog/how-docker-divide-image-layer/
+
