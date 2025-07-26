@@ -50,8 +50,19 @@ EX) java -cp myapp.jar:lib/* com.example.Main
 
 >Containers are a technology that allow applications to be packaged and isolated with their entire runtime environment. This makes it easier to maintain consistent behavior and functionality while moving the contained application between environments (dev, test, production) and across public, private, hybrid cloud, and on-premise. Because they are lightweight and portable, containers provide opportunities for faster development and meeting business needs as they arise.
 
+1. 리눅스 컨테이너는 운영체제 수준의 가상화 기술로 리눅스 커널을 공유하면서 프로세스를 격리된 환경에서 실행하는 기술.
+2. 컨테이너란 프로세스 격리 기술로, 사용자가 사용할 프로그램과 환경 설정들이 컨테이너에 담겨 격리되어 실행.
+3. 컨테이너에는 코드, 런타임, 시스템 도구, 시스템 라이브러리 등 서버에 설치되는 무엇이든 포함될 수 있으며, 실행 중인 환경에 관계 없이 언제나 동일하게 실행될 것을 보증.
+   
+<img width="1238" height="662" alt="image" src="https://github.com/user-attachments/assets/94b330df-a7a6-4b74-a57b-77efb47d816c" />
+
 [관련 레드햇 문서]([[https://docs.oracle.com/javase/8/docs/](https://blogs.oracle.com/javamagazine/post/how-the-jvm-locates-loads-and-runs-libraries](https://www.redhat.com/en/topics/containers))
 
+## 컨테이너는 어떻게 어플리케이션 간의 격리를 보장하는가?
+
+매우 기술적이고, 리눅스에 대한 깊은 이해가 필요한 부분. cgroups, namespace 등의 기능을 이용해, 격리된 것 처럼 '보이게' 만드는 것이 컨테이너 기술이다.
+
+[리눅스 컨테이너 관련 참고]([[https://80000coding.oopy.io/84206f08-8231-4478-ad46-ff340e693699))
 
 
 
@@ -70,4 +81,5 @@ EX) java -cp myapp.jar:lib/* com.example.Main
 
 참고 
 1. https://creboring.net/blog/how-docker-divide-image-layer/
+2. https://80000coding.oopy.io/84206f08-8231-4478-ad46-ff340e693699
 
