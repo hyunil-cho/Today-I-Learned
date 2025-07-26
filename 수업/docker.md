@@ -46,8 +46,11 @@ EX) java -cp myapp.jar:lib/* com.example.Main
 2. 유동적으로 스케일 아웃을 간편하게 수행할 수 있음 -> 워크로드가 늘어나면 단순히 컨테이너 이미지로부터 새로운 컨테이너를 생성하여 부하를 분산할 수 있음
 3. OS 환경에 영향을 덜 받는다. 하지만, 이 경우, 호환되는 커널의 종류에 따라 다르다
 
-## 컨테이너 이미지
+## 컨테이너?
 
+>Containers are a technology that allow applications to be packaged and isolated with their entire runtime environment. This makes it easier to maintain consistent behavior and functionality while moving the contained application between environments (dev, test, production) and across public, private, hybrid cloud, and on-premise. Because they are lightweight and portable, containers provide opportunities for faster development and meeting business needs as they arise.
+
+[관련 레드햇 문서]([[https://docs.oracle.com/javase/8/docs/](https://blogs.oracle.com/javamagazine/post/how-the-jvm-locates-loads-and-runs-libraries](https://www.redhat.com/en/topics/containers))
 
 
 
