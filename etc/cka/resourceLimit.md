@@ -65,6 +65,9 @@ CPU의 경우, throttle을 통해, CPU 사용을 제한함으로써 LIMIT 설정
 
 </br>
 
+<img width="507" height="533" alt="image" src="https://github.com/user-attachments/assets/ff988a1a-d6bb-4214-989a-25e1fff4bb65" />
+
+</br>
 
 # ResourceQuotas
 
@@ -75,5 +78,3 @@ CPU의 경우, throttle을 통해, CPU 사용을 제한함으로써 LIMIT 설정
 <img width="1015" height="436" alt="image" src="https://github.com/user-attachments/assets/410a4fdf-9f06-416a-9b87-f4331fb3cfcc" />
 
 
-
-<img width="507" height="533" alt="image" src="https://github.com/user-attachments/assets/ff988a1a-d6bb-4214-989a-25e1fff4bb65" />
