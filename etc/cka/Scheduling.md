@@ -91,7 +91,9 @@ taint-effect
 
 ### Hot to set toleration on pods
 
-spec.tolerations 내의 toleration 관련 내용을 추가
+spec.tolerations 내의 toleration 관련 내용을 아래와 같이 추가한다. 또한 중요한 점은, 어떤 node의 taint에 대하여
+toleration이 있는 pod가 있어도, 이 파드가 반드시 taint가 걸린 노드에만 배치되는 것을 강제하지는 않는다는 것이다.
+이를 구현하기 위해서는 node affinity를 사용하면 구현할 수 있다.
 
 </br>
 
