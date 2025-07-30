@@ -99,3 +99,28 @@ toleration이 있는 pod가 있어도, 이 파드가 반드시 taint가 걸린 �
 
 
 <img width="249" height="301" alt="image" src="https://github.com/user-attachments/assets/38b66a3a-1789-4f92-8e1d-e346089463e4" />
+
+</br>
+</br>
+
+## Node Selector
+
+파드가 특정 노드 위에 배치될 수 있도록, Pod definition file 내에 spec.nodeSelector 내에 key-value 형태로 지정할 수 있다.
+그러면 스케줄러는, node의 label을 탐색하여, 위에서 설정한 key-value에 매칭되는 노드가 있으면, 거기에 파드를 배치한다.
+
+이를 위해서는 노드에 레이블이 부착되어 있어야 하며, 이를 위해 다음과 같은 명령어를 사용할 수 있다.
+
+```
+kuybectl label nodes {node_name} <label-key> = <label-value>
+
+```
+
+Node Selector는 간단하고, 명료한 강력한 기능이지만, 다음과 같이 복잡한 케이스는 처리하지 못한다.
+
+1. every node except for not small-labeld nodes
+2. every node labeld with midium or large
+3. .....
+
+위와 같은 복잡한 케이스를 처리하기 위해, 쿠버네티스는 다양한 기능을 제공한다
+
+
