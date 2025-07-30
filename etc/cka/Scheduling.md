@@ -52,3 +52,15 @@ Label이 필요한 이유는, 수많은 오브젝트를 일정한 기준에 따�
 
 <img width="636" height="71" alt="image" src="https://github.com/user-attachments/assets/d288526e-23b3-4d4a-99ca-dacc2fa26431" />
 
+### Annotation
+
+Label이 오브젝트를 그룹 짓기 위함이라면, Annotation은 추가적인 정보를 더하기 위함이다. 이를 이용해, 빌드를 자동화하는 등 여러 
+추가적인 기능을 구현할 수 있다.
+
+</br>
+<br/>
+
+<img width="407" height="424" alt="image" src="https://github.com/user-attachments/assets/74dfec6b-19d0-412d-bfa4-e6deed8d978c" />
+
+
+
