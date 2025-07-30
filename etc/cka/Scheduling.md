@@ -12,7 +12,13 @@
 
 <img width="324" height="315" alt="image" src="https://github.com/user-attachments/assets/41a82a51-7a24-4fd8-8419-1ea90778409c" />
 
+<br/>
+<br/>
 
 그러나, 이미 생성된 파드의 경우에는, spec.nodeName을 변경할 수 없기 때문에, 이 경우에는 Binding Object를 생성 후, binding api를 호출해줄 수 있다.
+
+<br/>
+<br/>
+
 
 <img width="941" height="502" alt="image" src="https://github.com/user-attachments/assets/5172c578-3e08-4651-96f8-8e761ed208eb" />
