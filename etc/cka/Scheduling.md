@@ -62,5 +62,38 @@ Label이 오브젝트를 그룹 짓기 위함이라면, Annotation은 추가적�
 
 <img width="407" height="424" alt="image" src="https://github.com/user-attachments/assets/74dfec6b-19d0-412d-bfa4-e6deed8d978c" />
 
+<br/>
+</br>
+
+## Taints And Tolerations
+
+위 속성은 파드와 노드간의 관계, 즉, 파드가 어떤 노드에 위치할지에 대한 제한을 걸 수 있는 기능이다.
+
+Taint란, 노드에 거는 제한 조건으로, pod 중, 노드에 걸린 taint에 toleration이 없다면 해당 노드에는 배치될 수 없다.
+그러나 반대로, 노드에 걸린 taint를 toleration 할 수 있는 파드는, 해당 노드에 배치될 수 있다.
+
+이를 이용하면, 특별한 자원이나 역할이 할당된 노드에, 마찬가지로 특별한 자원을 필요로 하는 파드를 집중배치할 수 있게 된다.
 
 
+<img width="755" height="427" alt="image" src="https://github.com/user-attachments/assets/c0f20df5-2eb4-4bd7-803b-fef93a3bf7d4" />
+
+### How To Set Taints on node?
+
+```
+kubectl taint nodes {node_name} key=value:{taint-effect}
+
+taint-effect
+1. NoSchedule
+2. PreferNoSchedule (가능한 한 배치를 안 하지만, 도저히 없다면 스케줄을 허용한다)
+3. NoExecute (기존에 존재하는 파드 중, toleration이 없다면 다른 노드로 쫒아낸다)
+
+```
+
+### Hot to set toleration on pods
+
+spec.tolerations 내의 toleration 관련 내용을 추가
+
+</br>
+
+
+<img width="249" height="301" alt="image" src="https://github.com/user-attachments/assets/38b66a3a-1789-4f92-8e1d-e346089463e4" />
