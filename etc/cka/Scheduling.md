@@ -124,3 +124,32 @@ Node Selector는 간단하고, 명료한 강력한 기능이지만, 다음과 �
 위와 같은 복잡한 케이스를 처리하기 위해, 쿠버네티스는 다양한 기능을 제공한다
 
 
+## Node Affinity
+
+파드와 노드를 매칭하는 과정에서 Node Selector가 제공해주지 못하는, 다양한 표현식을 Node Affinity를 이용해 구현할 수 있다. 이때 주목할 점은, operator로, in, not in, equal 등 다양한 연산자를 제공하기 때문에, 이를 통해, node-selector로는 표현하지 못하는 다양한 표현식을 사용할 수 있다.
+
+</br>
+</br>
+
+<img width="447" height="348" alt="image" src="https://github.com/user-attachments/assets/8722f06c-1bc3-4a53-a5b3-b6b90ac5c5b5" />
+
+</br>
+</br>
+
+만약, affinity에 매칭되는 노드가 없거나, 혹은 매칭 되는 노드가 사라지게 될 경우에는 어떻게 될까?
+이에 대해서는, affinity 설정 시 사용하는 옵션에 따라 다르게 반영되며 현재는, 크게 다음과 같은 옵션을 사용할 수 있다.
+
+사용하는 옵션에 따라서, 파드가 아예 배치되지 않을 수도 있고, 도저히 불가능한 경우 배치될 수도 있다.
+또한, 현재는 파드가 실행 중, 노드의 레이블이 변경되어 더이상 affinity가 매칭되지 않는 경우에는, ignoredDuringExecution이 보여주듯 
+계속 실행을 이어간다.
+
+</br>
+
+<img width="631" height="312" alt="image" src="https://github.com/user-attachments/assets/1175e068-2a9a-485b-b8a1-9cfae595957f" />
+
+</br>
+
+<img width="688" height="353" alt="image" src="https://github.com/user-attachments/assets/85ed44d0-7b1a-4054-8f13-f93f3e4fc508" />
+
+
+
