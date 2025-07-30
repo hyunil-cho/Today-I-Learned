@@ -37,3 +37,22 @@ resource에 설정되는 CPU 개수는 환경에 따라 여러 의미로 사용�
 만약, 파드가 limit에 설정한 자원 이상을 사용하는 경우는 어떻게 되는가?
 CPU의 경우, throttle을 통해, CPU 사용을 제한함으로써 LIMIT 설정 이상을 사용하지 못하도록 제한한다.
 하지만, 메모리의 경우, LIMIT을 넘어서게 되면, OOM 킬러에 의하여 해당 pod는 terminated 된다.
+
+
+# resource / limit 관계
+
+
+경우에 따라서는 requyest만 걸고, limit을 걸지 않는 편이, 자원의 효율적인 사용 면에서는 매우 유리할 수 있다. 하지만, 이 경우, request가 설정되지 않은 새로운 파드가 배치되는 경우, 자원을 할당받지 못해 기아 상태에 빠질 수 있기 때문에, 최소한의 자원 할당을 보장할 수 있도록 꼭 request를 설정해주어야 한다.
+
+</br>
+
+<img width="950" height="432" alt="image" src="https://github.com/user-attachments/assets/3639a271-bdae-4645-a504-1eb2e236de81" />
+
+</br>
+
+하지만, 메모리의 경우, request는 걸었지만 메모리를 걸지 않은 경우, 위험한 상황이 발생할 수 있다. 예를 들어, limit이 걸려있지 않아 메모리를 마구 쓰는 상황에서, 또 다른 파드가 새로운 메모리를 요청하는 겨우, 가용 메모리가 없기 때문에, 이 경우에는 OOM Kiler가 발동된다. 하지만, 어떤 파드가 죽을지는, QOS 등 상황에 따라 다르기 때문에, 예상하기 쉽지 않다. 
+
+그렇기 때문에, CPU와는 다르게 메모리의 경우에는 왠만하면 request/limit을 항상 명시해두는 편이 안전하다.
+
+<img width="989" height="471" alt="image" src="https://github.com/user-attachments/assets/6d36a625-5667-45cb-81f6-949def81fea2" />
+
