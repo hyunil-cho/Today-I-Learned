@@ -124,6 +124,9 @@ EX) java -cp myapp.jar:lib/* com.example.Main
 
 # Docker란 무엇인가?
 
+</br>
+<img width="3840" height="2160" alt="image" src="https://github.com/user-attachments/assets/ced0e92f-7643-4533-b778-2bac96163619" />
+</br>
 
 Docker는 애플리케이션을 **컨테이너(Container)** 라는 단위로 포장하고 실행할 수 있게 해주는 플랫폼입니다. 컨테이너는 코드, 라이브러리, 설정 등을 포함하는 독립된 환경을 제공하므로 **"어디서나 실행되는 애플리케이션"**을 만들 수 있게 해줍니다.
 
@@ -179,7 +182,7 @@ docker run -p 8080:8080 myapp
 
 
 
-참고 
+# 참고 
 1. https://creboring.net/blog/how-docker-divide-image-layer/
 2. https://80000coding.oopy.io/84206f08-8231-4478-ad46-ff340e693699
 
