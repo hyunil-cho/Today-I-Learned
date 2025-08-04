@@ -45,3 +45,9 @@ Authorization을 통해, 해당 요청을 수행한 사용자가, 해당 명령�
 
 <img width="1032" height="225" alt="image" src="https://github.com/user-attachments/assets/6ca27482-3f60-4eb2-b639-0daf7c8b9e61" />
 
+</br>
+</br>
+
+또한, 새로운 컨트롤러를 추가하거나, 제외할 수 있으며, 이 경우, API 서버를 수정해야 한다.
+
+<img width="1290" height="490" alt="image" src="https://github.com/user-attachments/assets/eb89c11d-d034-4e33-b9bb-5fd6caeeae32" />
