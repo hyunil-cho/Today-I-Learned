@@ -28,10 +28,25 @@
 ## What if we want to persist data ?
 
 볼률을 생성하여, 컨테이너 내에서, 변경된 파일을 영속화할 수 있다. 이를 위해, 볼륨을 생성하고, 이를 컨테이너 내에 마운트하면 된다.
-이때, 두 가지 방식으로 불륨 마운팅이 가능한데, 첫 번째는 Volumne Mount이고, 다른 하나는, blind mount이다. 볼륨 마운트는, /var/lib/docker/volumes 등 이미 정해진
+이때, 두 가지 방식으로 불륨 마운팅이 가능한데, 첫 번째는 Volumne Mount이고, 다른 하나는, bind mount이다. 볼륨 마운트는, /var/lib/docker/volumes 등 이미 정해진
 도커 볼륨 데이터 저장소에 볼륨을 생성하고, 이를 컨테이너에 마운트하는 것이고, 다른 하나는, 도커 호스트 상의 임의의 장소를 마운트하는 것이다.
 
 </br>
 
 <img width="1667" height="992" alt="image" src="https://github.com/user-attachments/assets/0a9a30b7-4348-43c7-9898-e6a7f31410c3" />
+
+</br>
+
+## Storage Drivers
+
+위와 같은 작업(레이어드 아키텍처, 컨테이너 마운팅 등)을 가능케 하는 것이 바로 Storage Dirvers로 다음과 같은 것들이 사용된다. 이때, 사용되는 storage driver는
+도커 호스트에서 사용하는 운영체제에 따라 다르며, 당연히도 제공하는 기능이 다르다.
+
+- AUFS
+- ZFS
+- BTRFS
+- Device Mapper
+- Overlay
+- Overlay2
+
 
