@@ -49,4 +49,7 @@
 - Overlay
 - Overlay2
 
+## Volume Drivers
 
+볼륨을 생성하기 위한 plugins 방식의 드라이버로, 이를 이용해 AWS, GCP, AZURE와 같은 클라우드 및 다양한 환경에서 볼륨을 생성할 수 있도록 한다. 이때, 기본은 Local로
+Local Volumne Driver를 사용하면, 호스트 상의 볼륨을 쉽게 생성할 수 있다.
