@@ -17,6 +17,19 @@
 
  그러나, 만약 하나의 인그레스 내에서, 여러 팀이 유지보수하는 서비스가 쓰인다면 어떻게 될까?(multi-tenancy) 이 경우, 문제가 발생할 수 있다.
 
+ 
  또한, 복잡한 룰(단순히, path, url에 기반한 라우팅 정책)에 대해서는 처리가 불가능하며, 이 경우, annotation을 통해, 기능을 확장해야 하는데, 사용하는 인그레스 구현체마다 어노테이션의 종류 및 사용법이 달라 사용하기 불편하다는 단점이 있음.
 
  
+
+이런 문제를 해결하기 위해 GateWAY API를 사용할 수 있으며, 이는, L7, L4 계층에서 여러 라우팅 전략을 유동성있게 사용할 수 있게 해준다.
+
+1. GatewayClass
+2. Gateway(GatewayClass Instance)
+3. HTTPRoute / TCPRoute / GRPCRoute (L7, L4 관련 룰)
+
+</br>
+
+ <img width="929" height="408" alt="image" src="https://github.com/user-attachments/assets/80e88f42-f3e5-4383-aa93-870cb8fd367f" />
+
+
