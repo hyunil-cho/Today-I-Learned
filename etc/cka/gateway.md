@@ -2,6 +2,9 @@
 
 > Gateway API is a family of API kinds that provide dynamic infrastructure provisioning and advanced traffic routing.
 
+Gateway API가 존재하기 전에는, Load balanacer를 사용 시, 구현체 별로 설정 방식이 달라 사용하는 구현체에 따라서 설정도 따로 바꿔야 하는 어려움이 있었다.
+이를 해결하기 위하여, Gateway CRD를 제공하고, 이를 통해, GateWay API를 지원하는 모든 LoadBalancer 타입의 구현체에 대하여 동일한 설정 방법을 통해 제어하는 것이 가능하게 되었다.
+
 # Gateway API has three stable API kinds:
 
 1. GatewayClass: Defines a set of gateways with common configuration and managed by a controller that implements the class.
