@@ -24,3 +24,5 @@ kubeadm token create --print-join-command
 5. 4번에서 획득한 명령어를 워커노드에서 수행 및 kubectl get node를 통한 결과 확인!
 
 # 시사점
+
+1. 이번 케이스에서는 worker 노드가 아직 클러스터에 합류하기 전이었음. 만약 이미 포함된 상태에서 업그레이드였다면, drain을 꼭 수행해주어야 함!
