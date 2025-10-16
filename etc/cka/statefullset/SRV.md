@@ -183,5 +183,3 @@ SRV 레코드의 `target`은 **CNAME을 가리킬 수 있지만 주의가 필요
 * RFC 2782 — A DNS RR for specifying the location of services (SRV RRs)
 
 ---
-
-*원하시면 이 문서를 기반으로 블로그 포스트용 HTML 변환, 이미지(다이어그램) 추가, 혹은 예제(zone 파일과 클라이언트 동작 시퀀스) 시각화도 도와드릴게요.*
