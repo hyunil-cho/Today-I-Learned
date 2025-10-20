@@ -9,4 +9,12 @@ kubectl describe node {nodeName} 명령어를 통해, 현재 노드의 allocatab
 
 ```
 
+2. PriorityClass 설정 및 적용하라. 이때, 적용된 파드는 pending 상태가 아닌 running 상태이어야 한다
+
+```
+설정된 PC 중, 사용자가 정의한 PC의 값보다 1 작은 PC를 생성하고, 이를 기존에 존재하는 deployment에 적용해야 한다.
+이때, 중요한 것은, pc가 적용된 파드는 우선순위를 가지고 running 상태로 변경되어야 한다.
+
+문제 조건 상,
+```
    
