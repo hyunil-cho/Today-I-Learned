@@ -18,4 +18,22 @@ kubectl describe node {nodeName} 명령어를 통해, 현재 노드의 allocatab
 문제 조건 상, 메모리가 부족한데, deployment에 pc를 적용함으로써, 스케줄링 상에서 우위를 점하여 먼저 노드에 스케줄링되어야 하는게 포인트!!
 
 ```
+
+3. Network Policy 중 가장 not-over-permissive한 Network Policy 적용
+
+```
+Backend 네임스페이스와, FrontEnd 네임스페이스 위치한 디플로이먼트의 파드끼리 통신이 가능토록 해야 함.
+이때, 각 네임스페이스에는 default networkpolicy가 적용되어 있으며, 이는 deny all임.
+
+즉, 기본적으로는 두 네임스페이스간의 통신은 불가한 상태에서, 예시로 주어진 network policy 중 하나를 적용해야 함
+
+1번의 경우에는, backend namespace의 파드를 대상으로 적용되며, ingress.from 조건에 namespaceSelector가 걸려 있으며, frontend 네임스페이스에 속하는 파드가 접속하는 것을 허용하고 있음.
+
+2번은, 마찬가지로 backend namespace pod를 대상으로 하며, ingress.from에 namespaceSelector와 podSelector가 and 조건으로 묶여있으며, namespaceSelector는 frontend를 가리키고, podSelector는 그 중에서도 frontend deployment에 속하는 파드를 가르키고 있음.
+
+3번은 전혀 다른 파드를 가르키고 있기 때문에, 고려 대상이 아니었음.
+
+이 중, 2번은 1번도 더 엄격하게 조건이 걸려있음. namespace 뿐만 아니라 podSelector도 and로 묶여있어, 조건에 부합하는 조건(not-overly-permissive)은, namespaceSelector, podSelector 두 개가 and로 묶여있는 2번임
+
+```
    
