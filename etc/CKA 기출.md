@@ -36,4 +36,20 @@ Backend 네임스페이스와, FrontEnd 네임스페이스 위치한 디플로�
 이 중, 2번은 1번도 더 엄격하게 조건이 걸려있음. namespace 뿐만 아니라 podSelector도 and로 묶여있어, 조건에 부합하는 조건(not-overly-permissive)은, namespaceSelector, podSelector 두 개가 and로 묶여있는 2번임
 
 ```
+
+4. 트러블 슈팅 - 쿠버 업그레이드 이후 깨진 클러스터 복구
+
+```
+
+트러블 슈팅의 경우, 단계별로 천천히 어디가 문제인지 파악하는 것이 가장 중요함.
+1. kubectl get node 명령어를 시도, api 서버와 통신이 안되어 명령어가 실패함
+2. systemctl status kubelet을 명령어를 통해 kubelet가 running 상태임을 확인
+3. journalctl -u kubelet -r 명령어를 통해, 가장 최근 kubelet 로그를 확인 -> api 서버와 통신이 안되고 있음
+4. crictl ps로 컨테이너를 확인해보았으나, api-server 컨테이너가 떠있지 않았음.
+5. crictl ps -a 명령어를 통해, api-server 컨테이너가 내려가 있는 것을 확인 및
+6. 죽은 컨테이너의 로그를 확인해보니 etcd-서버와 통신이 실패함을 확인
+7. etcd 서버의 listen 주소를 확인해보니, api 서버가 보고 있는 주소가 잘못된 것을 확인
+8. api 서버 설정 변경을 통해, ETCD 주소를 알맞게 변경하고, kubelet을 재실행
+   -> api-server는 kubelet을 통해 static-pod로 떠있었기 때문에, kubelet을 재시작하여 pod를 다시 실행해주어야 함
+```
    
