@@ -52,4 +52,33 @@ Backend 네임스페이스와, FrontEnd 네임스페이스 위치한 디플로�
 8. api 서버 설정 변경을 통해, ETCD 주소를 알맞게 변경하고, kubelet을 재실행
    -> api-server는 kubelet을 통해 static-pod로 떠있었기 때문에, kubelet을 재시작하여 pod를 다시 실행해주어야 함
 ```
-   
+
+5. Ingress -> Gateway 마이그레이션
+
+```
+
+기존에 존재하는 Ingress를 살펴보면, TLS가 설정되어 있고, / 경로로 요청이 들어오면 이미 존재하는 백엔드로 라우팅 중이다.
+
+이에, Gateway에서 443포트에서 리스닝중인 Listener를 설정하고, 적절하게 TLS를 설정해준다. 이때, TLS 인증서는 시크릿에 저장되어 있기 때문에, 문서를 잘 읽고 그대로 적용만 해주면 된다.
+
+---
+spec:
+  gatewayClassName: nginx
+  listeners:
+    - name: https
+      protocol: HTTPS
+      port: 443
+      hostname: example.com
+      tls:
+        mode: Terminate
+        certificateRefs:
+          - kind: Secret
+            name: example-com-tls
+---
+
+또한, HttpRoute를 설정하고, '/' 경로에 대하여 동일한 백엔드를 보도록 설정한다.
+
+마지막으로, 두 가지 주의점이 있는데, 먼저, 기존 Ingress와 Gateway는 호스트명이 다르다! 이 부분은 꼭 체크해야 한다.
+두 번째로, 모든 마이그레이션이 끝나면 존재하는 Ignress resource는 지워주어야 한다.
+
+```
