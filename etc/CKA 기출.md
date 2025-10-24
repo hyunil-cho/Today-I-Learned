@@ -79,3 +79,14 @@ spec:
 마지막으로, 두 가지 주의점이 있는데, 먼저, 기존 Ingress와 Gateway는 호스트명이 다르다! 이 부분은 꼭 체크해야 한다.
 두 번째로, 모든 마이그레이션이 끝나면 존재하는 Ignress resource는 지워주어야 한다.
 ```
+
+6. 이미 존재하는 PV에 PVC 바운딩 후 마리아DB에 마운트
+
+```
+PV는 이미 존재하며, PV와 Bound 될 수 있는 PVC를 생성한 후, 문제에서 주어지는 마리아DB Deployment pod에 mount 후 deployment를 생성 후, POD가 정상적으로 뜨면 완료
+
+이를 위해 PV의 조건(Storage request, accessModes, className) 등을 확실히 파악해야 함
+
+또한, 조건에 맞게 PVC를 생성하더라도, 바로임
+
+```
