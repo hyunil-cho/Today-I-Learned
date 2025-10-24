@@ -39,7 +39,7 @@ Backend 네임스페이스와, FrontEnd 네임스페이스 위치한 디플로�
 
 4. 트러블 슈팅 - 쿠버 업그레이드 이후 깨진 클러스터 복구
 
-
+```
 1. kubectl get node 명령어를 시도, api 서버와 통신이 안되어 명령어가 실패함
 2. systemctl status kubelet을 명령어를 통해 kubelet가 running 상태임을 확인
 3. journalctl -u kubelet -r 명령어를 통해, 가장 최근 kubelet 로그를 확인 -> api 서버와 통신이 안되고 있음
@@ -78,3 +78,4 @@ spec:
 
 마지막으로, 두 가지 주의점이 있는데, 먼저, 기존 Ingress와 Gateway는 호스트명이 다르다! 이 부분은 꼭 체크해야 한다.
 두 번째로, 모든 마이그레이션이 끝나면 존재하는 Ignress resource는 지워주어야 한다.
+```
