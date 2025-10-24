@@ -42,43 +42,6 @@ Backend 네임스페이스와, FrontEnd 네임스페이스 위치한 디플로�
 ```
 
 트러블 슈팅의 경우, 단계별로 천천히 어디가 문제인지 파악하는 것이 가장 중요함.
-1. kubectl get node 명령어를 시도, api 서버와 통신이 안되어 명령어가 실패함
-2. systemctl status kubelet을 명령어를 통해 kubelet가 running 상태임을 확인
-3. journalctl -u kubelet -r 명령어를 통해, 가장 최근 kubelet 로그를 확인 -> api 서버와 통신이 안되고 있음
-4. crictl ps로 컨테이너를 확인해보았으나, api-server 컨테이너가 떠있지 않았음.
-5. crictl ps -a 명령어를 통해, api-server 컨테이너가 내려가 있는 것을 확인 및
-6. 죽은 컨테이너의 로그를 확인해보니 etcd-서버와 통신이 실패함을 확인
-7. etcd 서버의 listen 주소를 확인해보니, api 서버가 보고 있는 주소가 잘못된 것을 확인
-8. api 서버 설정 변경을 통해, ETCD 주소를 알맞게 변경하고, kubelet을 재실행
-   -> api-server는 kubelet을 통해 static-pod로 떠있었기 때문에, kubelet을 재시작하여 pod를 다시 실행해주어야 함
-```
-
-5. Ingress -> Gateway 마이그레이션
-
-```
-
-기존에 존재하는 Ingress를 살펴보면, TLS가 설정되어 있고, / 경로로 요청이 들어오면 이미 존재하는 백엔드로 라우팅 중이다.
-
-이에, Gateway에서 443포트에서 리스닝중인 Listener를 설정하고, 적절하게 TLS를 설정해준다. 이때, TLS 인증서는 시크릿에 저장되어 있기 때문에, 문서를 잘 읽고 그대로 적용만 해주면 된다.
-
----
-spec:
-  gatewayClassName: nginx
-  listeners:
-    - name: https
-      protocol: HTTPS
-      port: 443
-      hostname: example.com
-      tls:
-        mode: Terminate
-        certificateRefs:
-          - kind: Secret
-            name: example-com-tls
----
-
-또한, HttpRoute를 설정하고, '/' 경로에 대하여 동일한 백엔드를 보도록 설정한다.
-
-마지막으로, 두 가지 주의점이 있는데, 먼저, 기존 Ingress와 Gateway는 호스트명이 다르다! 이 부분은 꼭 체크해야 한다.
-두 번째로, 모든 마이그레이션이 끝나면 존재하는 Ignress resource는 지워주어야 한다.
+1. kubectl get node 명령어를다
 
 ```
